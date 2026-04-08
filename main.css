@@ -1,4 +1,11 @@
-   :root {
+   @font-face {
+    src: url("fonts/Jabin-Typeface.woff2") format("woff2");
+    font-family: 'Jabin';
+    font-style: normal;
+    font-weight: normal;
+    }
+    
+    :root {
       --pink: #f0cfdc;
       --purple: #390b7c;
       --purple-dark: #240253;
@@ -17,7 +24,7 @@
     html, body {
       background-color: var(--pink);
       color: var(--text-body);
-      font-family: 'Cabin', sans-serif;
+      font-family: 'Jabin', sans-serif;
       font-size: 15px;
       line-height: 1.55;
     }
