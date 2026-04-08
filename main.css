@@ -1,7 +1,7 @@
    :root {
-      --cream: #e8e0d0;
-      --tan: #b5a48a;
-      --tan-dark: #8a7a65;
+      --pink: #f0cfdc;
+      --purple: #390b7c;
+      --purple-dark: #240253;
       --black: #1a1612;
       --black-mid: #2c2720;
       --text-body: #1a1612;
@@ -15,7 +15,7 @@
     }
 
     html, body {
-      background-color: var(--cream);
+      background-color: var(--pink);
       color: var(--text-body);
       font-family: 'Cabin', sans-serif;
       font-size: 15px;
@@ -24,7 +24,7 @@
 
     /* ─── HEADER ─────────────────────────────────────── */
     .site-header {
-      background-color: var(--cream);
+      background-color: var(--pink);
       display: grid;
       grid-template-columns: 1fr auto;
       align-items: start;
@@ -65,17 +65,17 @@
     .tab-shape {
       width: 70px;
       height: 36px;
-      background: var(--tan);
+      background: var(--purple);
       border-radius: 50% 50% 0 0;
     }
 
     .tab-shape.dark {
-      background: var(--tan-dark);
+      background: var(--purple-dark);
     }
 
     .header-right {
       background-color: var(--black);
-      color: var(--cream);
+      color: var(--pink);
       display: flex;
       flex-direction: column;
       align-items: flex-end;
@@ -91,7 +91,7 @@
       font-size: clamp(2.8rem, 7vw, 4.2rem);
       letter-spacing: 0.06em;
       line-height: 1;
-      color: var(--cream);
+      color: var(--pink);
     }
 
     .header-right .subhead {
@@ -99,7 +99,7 @@
       font-size: 0.68rem;
       letter-spacing: 0.25em;
       text-transform: lowercase;
-      color: var(--cream);
+      color: var(--pink);
       opacity: 0.75;
     }
 
@@ -111,7 +111,7 @@
 
     /* ─── TEXT COLUMNS SECTION ───────────────────────── */
     .text-section {
-      background: var(--cream);
+      background: var(--pink);
       padding: 28px 18px;
     }
 
@@ -122,8 +122,8 @@
     }
 
     .text-card {
-      background: var(--cream);
-      border: 2px solid var(--tan);
+      background: var(--pink);
+      border: 2px solid var(--purple);
       border-radius: var(--radius);
       padding: 18px 16px 16px;
       font-size: 0.82rem;
@@ -156,7 +156,7 @@
 
     /* ─── HERO BAND ──────────────────────────────────── */
     .hero-band {
-      background: var(--tan);
+      background: var(--purple);
       display: grid;
       grid-template-columns: 1fr auto;
       align-items: center;
@@ -202,7 +202,7 @@
       height: 22px;
       border-radius: 50%;
       background: var(--black);
-      border: 3px solid var(--tan);
+      border: 3px solid var(--purple);
     }
 
     .slider-line:nth-child(1) .knob { top: 30%; }
@@ -211,7 +211,7 @@
 
     /* ─── BOTTOM TEXT SECTION ────────────────────────── */
     .bottom-text-section {
-      background: var(--cream);
+      background: var(--pink);
       padding: 28px 18px;
     }
 
@@ -243,8 +243,8 @@
     }
 
     .bottom-card {
-      background: var(--cream);
-      border: 2px solid var(--tan);
+      background: var(--pink);
+      border: 2px solid var(--purple);
       border-radius: var(--radius);
       padding: 18px 16px;
       font-size: 0.82rem;
@@ -258,7 +258,7 @@
 
     /* ─── FOOTER / CONTACT ───────────────────────────── */
     .site-footer {
-      background: var(--tan);
+      background: var(--purple);
       border-top: 5px solid var(--black);
       padding: 24px 22px 30px;
       position: relative;
@@ -324,7 +324,7 @@
       width: 120px;
       height: 120px;
       border-radius: 50%;
-      background: var(--tan-dark);
+      background: var(--purple-dark);
       opacity: 0.6;
       margin-left: -30px;
     }
@@ -346,7 +346,7 @@
         align-items: flex-start;
         padding: 10px 22px 14px;
         min-width: unset;
-        border-top: 3px solid var(--cream);
+        border-top: 3px solid var(--pink);
       }
 
       /* 3 text cards → 1 column */
