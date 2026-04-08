@@ -1,0 +1,394 @@
+   :root {
+      --cream: #e8e0d0;
+      --tan: #b5a48a;
+      --tan-dark: #8a7a65;
+      --black: #1a1612;
+      --black-mid: #2c2720;
+      --text-body: #1a1612;
+      --radius: 18px;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      background-color: var(--cream);
+      color: var(--text-body);
+      font-family: 'Cabin', sans-serif;
+      font-size: 15px;
+      line-height: 1.55;
+    }
+
+    /* ─── HEADER ─────────────────────────────────────── */
+    .site-header {
+      background-color: var(--cream);
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: start;
+      padding: 0;
+      border-bottom: 5px solid var(--black);
+    }
+
+    .header-left {
+      padding: 18px 22px 0;
+    }
+
+    .header-left h1 {
+      font-family: 'Yeseva One', serif;
+      font-size: clamp(2rem, 6vw, 3.4rem);
+      line-height: 1;
+      letter-spacing: -0.02em;
+      color: var(--black);
+    }
+
+    .header-left h1 span.year {
+      font-family: 'Cabin', sans-serif;
+      font-size: 0.45em;
+      font-weight: 400;
+      vertical-align: middle;
+      margin-left: 6px;
+      color: var(--black);
+      letter-spacing: 0.04em;
+    }
+
+    /* rounded tab shapes below logo */
+    .header-tabs {
+      display: flex;
+      gap: 8px;
+      margin-top: 12px;
+      padding-bottom: 0;
+    }
+
+    .tab-shape {
+      width: 70px;
+      height: 36px;
+      background: var(--tan);
+      border-radius: 50% 50% 0 0;
+    }
+
+    .tab-shape.dark {
+      background: var(--tan-dark);
+    }
+
+    .header-right {
+      background-color: var(--black);
+      color: var(--cream);
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: flex-end;
+      padding: 16px 20px 8px;
+      min-width: 180px;
+      height: 100%;
+      gap: 4px;
+    }
+
+    .header-right .word-type {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(2.8rem, 7vw, 4.2rem);
+      letter-spacing: 0.06em;
+      line-height: 1;
+      color: var(--cream);
+    }
+
+    .header-right .subhead {
+      font-family: 'Cabin', sans-serif;
+      font-size: 0.68rem;
+      letter-spacing: 0.25em;
+      text-transform: lowercase;
+      color: var(--cream);
+      opacity: 0.75;
+    }
+
+    /* ─── THICK DIVIDER ──────────────────────────────── */
+    .divider-thick {
+      height: 12px;
+      background: var(--black);
+    }
+
+    /* ─── TEXT COLUMNS SECTION ───────────────────────── */
+    .text-section {
+      background: var(--cream);
+      padding: 28px 18px;
+    }
+
+    .text-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+
+    .text-card {
+      background: var(--cream);
+      border: 2px solid var(--tan);
+      border-radius: var(--radius);
+      padding: 18px 16px 16px;
+      font-size: 0.82rem;
+      line-height: 1.6;
+      color: var(--black);
+      position: relative;
+    }
+
+    .text-card .drop-letter {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 3.6rem;
+      line-height: 0.8;
+      float: left;
+      margin-right: 6px;
+      color: var(--black);
+    }
+
+    .text-card .drop-letter.top-right {
+      float: right;
+      margin-left: 6px;
+      margin-right: 0;
+    }
+
+    /* card 1: left-aligned text */
+    .text-card.card-1 { text-align: left; }
+    /* card 2: centered */
+    .text-card.card-2 { text-align: center; }
+    /* card 3: centered */
+    .text-card.card-3 { text-align: center; }
+
+    /* ─── HERO BAND ──────────────────────────────────── */
+    .hero-band {
+      background: var(--tan);
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      padding: 0 24px;
+      border-top: 5px solid var(--black);
+      border-bottom: 5px solid var(--black);
+      min-height: 160px;
+      gap: 24px;
+      overflow: hidden;
+    }
+
+    .hero-word {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(5rem, 18vw, 11rem);
+      line-height: 0.88;
+      color: var(--black);
+      letter-spacing: -0.01em;
+      white-space: nowrap;
+    }
+
+    /* slider icon: three vertical lines with circles */
+    .slider-icon {
+      display: flex;
+      gap: 14px;
+      align-items: center;
+      padding: 16px 0;
+      flex-shrink: 0;
+    }
+
+    .slider-line {
+      position: relative;
+      width: 6px;
+      background: var(--black);
+      border-radius: 3px;
+      height: 120px;
+    }
+
+    .slider-line .knob {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: var(--black);
+      border: 3px solid var(--tan);
+    }
+
+    .slider-line:nth-child(1) .knob { top: 30%; }
+    .slider-line:nth-child(2) .knob { top: 55%; }
+    .slider-line:nth-child(3) .knob { top: 18%; }
+
+    /* ─── BOTTOM TEXT SECTION ────────────────────────── */
+    .bottom-text-section {
+      background: var(--cream);
+      padding: 28px 18px;
+    }
+
+    .bottom-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    /* left col: double horizontal rules above */
+    .bottom-left-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .double-rule {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      margin-bottom: 14px;
+    }
+
+    .double-rule span {
+      display: block;
+      height: 4px;
+      background: var(--black);
+      border-radius: 2px;
+    }
+
+    .bottom-card {
+      background: var(--cream);
+      border: 2px solid var(--tan);
+      border-radius: var(--radius);
+      padding: 18px 16px;
+      font-size: 0.82rem;
+      line-height: 1.6;
+      color: var(--black);
+    }
+
+    .bottom-card.right {
+      text-align: center;
+    }
+
+    /* ─── FOOTER / CONTACT ───────────────────────────── */
+    .site-footer {
+      background: var(--tan);
+      border-top: 5px solid var(--black);
+      padding: 24px 22px 30px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .footer-top {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      align-items: end;
+      gap: 32px;
+      margin-bottom: 16px;
+    }
+
+    .footer-contact-label {
+      font-family: 'Yeseva One', serif;
+      font-size: clamp(1.8rem, 6vw, 3rem);
+      color: var(--black);
+      line-height: 1;
+    }
+
+    .footer-name-block {
+      display: flex;
+      align-items: baseline;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .footer-name {
+      font-family: 'Yeseva One', serif;
+      font-size: clamp(1.2rem, 4vw, 2rem);
+      color: var(--black);
+    }
+
+    .footer-meta {
+      font-family: 'Cabin', sans-serif;
+      font-size: 0.72rem;
+      color: var(--black-mid);
+      letter-spacing: 0.05em;
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .footer-preferred {
+      font-family: 'Yeseva One', serif;
+      font-size: 0.9rem;
+      color: var(--black);
+      line-height: 1.4;
+      max-width: 200px;
+    }
+
+    /* decorative circles bottom-right */
+    .footer-circles {
+      position: absolute;
+      bottom: -30px;
+      right: -20px;
+      display: flex;
+      gap: -10px;
+    }
+
+    .footer-circle {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background: var(--tan-dark);
+      opacity: 0.6;
+      margin-left: -30px;
+    }
+
+    .footer-circle:last-child {
+      background: var(--black);
+      opacity: 0.18;
+    }
+
+    /* ─── RESPONSIVE ─────────────────────────────────── */
+    @media (max-width: 680px) {
+
+      /* Header stacks */
+      .site-header {
+        grid-template-columns: 1fr;
+      }
+
+      .header-right {
+        align-items: flex-start;
+        padding: 10px 22px 14px;
+        min-width: unset;
+        border-top: 3px solid var(--cream);
+      }
+
+      /* 3 text cards → 1 column */
+      .text-grid {
+        grid-template-columns: 1fr;
+      }
+
+      /* Hero stacks: word above slider icon */
+      .hero-band {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        text-align: center;
+        padding: 20px 18px;
+        min-height: unset;
+      }
+
+      .hero-word {
+        font-size: clamp(4.5rem, 22vw, 8rem);
+      }
+
+      .slider-icon {
+        height: 80px;
+      }
+
+      .slider-line {
+        height: 80px;
+      }
+
+      /* Bottom text cards → 1 column */
+      .bottom-grid {
+        grid-template-columns: 1fr;
+      }
+
+      /* Footer stacks */
+      .footer-top {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+    }
+
+    @media (max-width: 400px) {
+      .hero-word {
+        font-size: 3.8rem;
+      }
+    }
